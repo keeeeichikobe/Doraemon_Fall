@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.snow-container {
+    background-color: beige;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.snow {
+    position: absolute;
+    animation: snowFall 10s linear, snowRotate 10s linear infinite; /* 画像を降らせるアニメーションと回転アニメーション */
+}
+
+.title_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.title_logo img{
+    height: 100px;
+    z-index: 1;
+}
+
+@keyframes snowRotate{
+    0%{
+        opacity: 0;
+        top:0;
+        transform: rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top:100vh;
+        transform: rotate(360deg);
+
+    }
+}
+
